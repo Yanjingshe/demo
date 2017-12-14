@@ -1,0 +1,97 @@
+body {
+  background-color: #ededef;
+}
+#wrapper{
+	margin-top:10px;
+	width:100%;
+}
+#wrapper{
+	text-align:center;
+}
+#container{
+	position:relative;
+	width:1100px;
+	margin:0 auto 25px;
+	padding-bottom: 10px;
+	
+}
+.grid{
+	width:200px;
+	min-height:100px;
+	padding: 15px;
+	background:#fff;
+	margin:8px;
+	font-size:12px;
+	float:left;
+	box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+	-moz-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+	-webkit-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+	transition: top 1s ease, left 1s ease;
+	-webkit-transition: top 1s ease, left 1s ease;
+	-moz-transition: top 1s ease, left 1s ease;
+	-o-transition: top 1s ease, left 1s ease;
+	-ms-transition: top 1s ease, left 1s ease;
+}
+
+.grid strong {
+	border-bottom:1px solid #ccc;
+	margin:10px 0;
+	display:block;
+	padding:0 0 5px;
+	font-size:17px;
+	position: relative;
+}
+.grid .like{
+	float: left;
+}
+.grid p{
+	margin-bottom: 9px;
+}
+.grid .meta{
+	text-align:center;
+	float: right;
+	color:#9ac600;
+	border: 1px solid #9ac600;
+	line-height: 20px;
+	height: 20px;
+	width: 60px;
+	font-style:italic;
+	border-radius: 5px;
+	font-family:"Microsoft YaHei";
+	cursor: pointer;
+}
+.grid .removeView{
+	background: #ccc;
+	border:none;
+	color: #0f0f0f;
+
+}
+.grid .good{
+	position: absolute;
+	bottom: 10px;
+	left: 45px;
+}
+.grid .imgholder img{
+	max-width:100%;
+	background:#ccc;
+	display:block;
+}
+@media screen and (max-width : 1240px) {
+	body{
+		overflow:auto;
+	}
+}
+@media screen and (max-width : 900px) {
+	#backlinks{
+		float:none;
+		clear:both;
+	}
+	#backlinks a{
+		display:inline-block;
+		padding-right:20px;
+	}
+	#wrapper{
+		margin-top:10px;
+	}
+}
+p,p a{font-size:12px;color:#666;}
