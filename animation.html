@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>骰子</title>
+    <style>
+       body{
+           background-color:black;
+            background-image:
+            radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+            radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+            radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+            radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+            background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+            background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+       }
+        .box {
+            width: 200px;
+            height: 200px;
+            /* background: #ccc; */
+            margin: 100px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            /* perspective: 1000px;    */
+            animation: act 6s infinite linear; 
+            /* transform: rotateY(-90deg) */
+            
+        }
+
+        .box div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            border-radius: 20px;
+            border: outset 10px #ccc;
+            display: flex;            
+        }
+
+        .font {
+            background: lightgreen;
+            transform: translateZ(100px);
+            opacity: 0.6;
+           justify-content: center;
+           align-items: center;
+        }
+
+        .back {
+            background: #f30;
+            transform: translateZ(-100px);
+            opacity: 0.6;
+            justify-content: space-between;
+        }
+
+        .up {
+            background: lightblue;
+            transform: rotateX(90deg) translateZ(100px);
+            opacity: 0.6;
+            justify-content: space-between;
+        }
+
+        .down {
+            background: gray;
+            transform: rotateX(90deg) translateZ(-100px);
+            opacity: 0.6;
+            position: relative;
+        }
+
+        .left {
+            background: yellow;
+            transform: rotateY(90deg) translateZ(-100px);
+            opacity: 0.6;
+            position: relative;
+            flex-wrap:wrap-reverse ;
+            justify-content: space-between;
+        }
+
+        .right {
+            background: blue;
+            transform: rotateY(90deg) translateZ(100px);
+            opacity: 0.6;
+            position: relative;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* justify-content: center;
+           align-items: center; */
+        }
+
+        @keyframes act {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+            100% {
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+        .box p{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .p1{
+            background: linear-gradient(0deg,#000,#ccc);
+            
+        }
+        .p2{
+            background: #fff;
+            background: linear-gradient(0deg,#000,#ccc);            
+        }
+        .p3{
+            background: #fff;
+            background: linear-gradient(0deg,#000,#ccc);            
+            align-self: flex-end;
+        }
+        .p4{
+            background: brown ;
+            background: linear-gradient(0deg,#000,#ccc);
+            
+        }
+        .p5{
+            background: brown;
+            background: linear-gradient(0deg,#000,#ccc);            
+            align-self: center;
+        }
+        .p6{
+            background: brown;
+            background: linear-gradient(0deg,#000,#ccc);
+            align-self: flex-end;
+        }
+        .p7{
+            background: brown;
+            background: linear-gradient(0deg,#000,#ccc);
+            
+        }
+        .p8{
+            background: brown;
+            background: linear-gradient(0deg,#000,#ccc);
+            position: absolute;
+            top: 120px;    
+        }
+        .p9{
+            background: brown;
+            background: linear-gradient(0deg,#000,#ccc);
+             position: absolute;
+             left: 150px;
+        }
+        .p10{
+            background: brown;
+            background: linear-gradient(0deg,#000,#ccc);
+             position: absolute;            
+             left: 150px;
+            top: 120px;    
+        }
+        .p11{
+            background: #757777;
+            background: linear-gradient(0deg,#000,red);
+        }
+        .p12{
+            background: #757777;
+            background: linear-gradient(0deg,#000,red);
+            position: absolute;
+            align-self: flex-end;   
+            top: 0px;  
+            left: 150px;       
+        }
+        .p13{
+            background: #757777;
+            background: linear-gradient(0deg,#000,red);
+            position: absolute;
+            align-self: center;
+            top: 55px;
+            left: 75px;
+            
+        }
+        .p14{
+            background: #757777;
+            background: linear-gradient(0deg,#000,red);
+        }
+        .p15{
+            background: #757777;
+            background: linear-gradient(0deg,#000,red);
+            align-self: flex-end;
+            position: absolute;            
+            
+        }
+        .p16{
+            background: #A1856D;
+            background: linear-gradient(0deg,#000,red);
+        }
+        .p17{
+            background: #A1856D;
+            background: linear-gradient(0deg,#000,red);
+            position: absolute;
+            left: 75px;
+        }
+        .p18{
+            background: #A1856D;
+            background: linear-gradient(0deg,#000,red);
+            position: absolute;
+            left: 150px;
+        }
+        .p19{
+            background: #A1856D;
+            background: linear-gradient(0deg,#000,red);
+            position: absolute;
+            left: 75px;
+            top: 118px;
+        }
+        .p20{
+            background: #A1856D;
+            background: linear-gradient(0deg,#000,red);
+            position: absolute;
+            top: 118px;
+        }
+        .p21{
+            background: #A1856D;
+            background: linear-gradient(0deg,#000,red);
+            align-self: flex-end;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="font">
+            <p class="p1"></p>
+        </div>
+        <div class="back">
+            <p class="p2"></p>
+            <p class="p3"></p>
+        </div>
+        <div class="up">
+            <p class="p4"></p>
+            <p class="p5"></p>
+            <p class="p6"></p>
+        </div>
+        <div class="down">
+            <p class="p7"></p>
+            <p class="p8"></p>
+            <p class="p9"></p>
+            <p class="p10"></p>
+        </div>
+        <div class="left">
+            <p class="p11"></p>
+            <p class="p12"></p>
+            <p class="p13"></p>
+            <p class="p14"></p>
+            <p class="p15"></p>
+        </div>
+        <div class="right">
+            <p class="p16"></p>
+            <p class="p17"></p>
+            <p class="p18"></p>
+            <p class="p19"></p>
+            <p class="p20"></p>
+            <p class="p21"></p>
+        </div>
+    </div>
+</body>
+
+</html>
